@@ -7,6 +7,12 @@ Integrantes do grupo: Suelen Salarolli Bisi, Lucas Borges do Carmo,Fabrício Lop
 
 Implementação de um **Sistema de Delivery** seguindo os princípios da **Clean Architecture** (Robert C. Martin). O sistema gerencia o ciclo de vida completo de pedidos e agora conta com um **Catálogo de Itens** persistido em banco de dados SQLite. Entre as funcionalidades estão: criação de pedidos, cálculo de descontos, aplicação de cupons, acompanhamento de status com notificações em tempo real e gerenciamento de um catálogo base de produtos.
 
+### Pré-requisitos
+
+- **Java 21** (JDK 21)
+- **Apache Maven 3.8+**
+- Drivers JDBC do SQLite (já configurado no `pom.xml`).
+
 ### Arquitetura
 
 O projeto segue a **Dependency Rule**: dependências sempre apontam para dentro (em direção ao domínio).
@@ -77,12 +83,6 @@ mvn compile exec:java@swing
 ```bash
 mvn compile exec:java
 ```
-
-### Pré-requisitos
-
-- **Java 21** (JDK 21)
-- **Apache Maven 3.8+**
-- Drivers JDBC do SQLite (já configurado no `pom.xml`).
 
 ### Como Executar os Testes
 
