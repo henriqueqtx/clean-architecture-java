@@ -1,11 +1,20 @@
 # Sistema de Delivery — Clean Architecture
 
 ## Projeto de Sistemas de Software — UFES 2026/1
-Integrantes do grupo: Suelen Salarolli Bisi, Lucas Borges do Carmo,Fabrício Lopes Lima do Amaral,Raphael Figueiredo Secchin,Marcelo Vieira Gomes,Maria Clara Gueler Feitani e  Henrique Queiroz Teixeira.
 
 ### Descrição
 
 Implementação de um **Sistema de Delivery** seguindo os princípios da **Clean Architecture** (Robert C. Martin). O sistema gerencia o ciclo de vida completo de pedidos e agora conta com um **Catálogo de Itens** persistido em banco de dados SQLite. Entre as funcionalidades estão: criação de pedidos, cálculo de descontos, aplicação de cupons, acompanhamento de status com notificações em tempo real e gerenciamento de um catálogo base de produtos.
+
+<img width="978" height="659" alt="image" src="https://github.com/user-attachments/assets/0bb480b6-bf2d-42f6-8124-98846586828c" />
+
+
+
+### 🛠️ Tecnologias Utilizadas
+- **Linguagem:** Java 21
+- **Arquitetura & Design:** Clean Architecture, SOLID, Design Patterns (GoF)
+- **Banco de Dados:** SQLite (JDBC)
+- **Ferramentas:** Maven (Build), JUnit 5 (Testes)
 
 ### Pré-requisitos
 
@@ -54,7 +63,14 @@ Infrastructure → Adapter → Application (Use Cases / Ports) → Domain (Entit
 ### Destaques da Implementação
 
 - **Multi-Interface Simultânea (Swing + Web API):** O projeto sobe automaticamente uma janela Desktop (Swing) E um Servidor Web (na porta 8080) simultaneamente. Ambos consomem 100% dos mesmos Use Cases, provando que o Core da aplicação é agnóstico ao canal de entrada/saída. Basta acessar `http://localhost:8080/pedidos` com o sistema rodando.
+
+    <img width="1247" height="660" alt="cleanArchiteture" src="https://github.com/user-attachments/assets/e1a61646-1fc1-4437-be7a-7ee4616a1b7c" />
+
+    
 - **Padrão State Puro:** O ciclo de vida do pedido foi modelado utilizando o Padrão State Clássico do GoF, garantindo que o Domínio permaneça rico e isento de estruturas como `switch/case` sem comprometer os bancos de dados que armazenam os status em formato de texto.
+
+
+
 
 - **Catálogo de Itens (SQLite):** Ao iniciar o sistema, um catálogo de produtos pré-cadastrados é carregado do SQLite e disponibilizado na UI. O usuário pode adicionar os itens do catálogo direto para o carrinho ou cadastrar novos itens permanentemente.
 - **Auto-Load de Pedidos:** A interface consulta automaticamente o repositório ao abrir e exibe os pedidos em uma `JTable`.
