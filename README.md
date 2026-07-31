@@ -6,7 +6,7 @@
 
 Implementação de um **Sistema de Delivery** seguindo os princípios da **Clean Architecture** (Robert C. Martin). O sistema gerencia o ciclo de vida completo de pedidos e agora conta com um **Catálogo de Itens** persistido em banco de dados SQLite. Entre as funcionalidades estão: criação de pedidos, cálculo de descontos, aplicação de cupons, acompanhamento de status com notificações em tempo real e gerenciamento de um catálogo base de produtos.
 
-<img width="978" height="659" alt="image" src="https://github.com/user-attachments/assets/0bb480b6-bf2d-42f6-8124-98846586828c" />
+<img width="977" height="658" alt="ca_java_demo" src="https://github.com/user-attachments/assets/4d4b52f4-3cb1-43cf-aace-d14eb83239e1" />
 
 
 
